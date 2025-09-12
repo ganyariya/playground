@@ -6,3 +6,6 @@ compile: precompile
 
 assemble: compile
 	gcc -g3 -O0 -fno-asynchronous-unwind-tables -c *.s
+
+link: assemble
+	gcc *.o -o main
